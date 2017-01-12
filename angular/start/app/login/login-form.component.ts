@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   
 })
 export class LoginFormComponent {
+  
+  userName: string = '';
+  userPassword: string = '';
+
+  onSubmit()
+  {
+
+  }
  }

@@ -1,22 +1,39 @@
-<!--Pulling Awesome Font -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-offset-5 col-md-3">
-            <div class="form-login">
-            <h4>Welcome back.</h4>
-            <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username" />
-           
-            <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
-          
-            <div class="wrapper">
-            <span class="group-btn">     
-                <a href="#" class="btn btn-primary btn-md">login <i class="fa fa-sign-in"></i></a>
-            </span>
-            </div>
-            </div>
-        
+<form>
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">Sign In</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <input  
+                        [(ngModel)]="userName" name = "userName" required
+                        type="text"                         
+                        id="userName" 
+                        class="form-control" 
+                        placeholder="username" 
+                        style="margin-bottom:10px"  />            
+                <input 
+                        [(ngModel)]="userPassword" name = "userPassword" required
+                        type="password"                        
+                        id="userPassword" 
+                        class="form-control" 
+                        placeholder="password" 
+                        style="margin-bottom:10px" />
+                    <div class="wrapper">
+                        <span class="group-btn">     
+                        <button class="btn btn-primary btn-md" type="submit">Submit <i class="fa fa-sign-in"></i></button>
+                        </span>
+                    </div>
+                        <p>Value: {{ userName }}</p>
+                        <p>Valid: {{ userName.valid }}</p>
+            </div>   
         </div>
     </div>
-</div>
+    <script>
+$('btn btn-primary btn-md').click(function(e){
+   e.stopPropagation(); 
+});​
+</script>
+</form>
+
