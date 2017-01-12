@@ -3,16 +3,15 @@
     <title>Angular QuickStart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- CORE minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     
      <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
     <!-- Theme CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
@@ -23,7 +22,7 @@
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+    
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
    
@@ -35,8 +34,26 @@
   <body>
     <my-app>Loading...</my-app>
 
+    <script type="text/javascript" src="./jquery/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>   
+    <script type="text/javascript" src="./js/agency.js"></script>
+    
+<script>
+//NAVBAR Color Change on Scroll
+    $(document).ready(function(){
+      $(window).scroll(function() { // check if scroll event happened
+        if ($(document).scrollTop() > 200) { // check if user scrolled more than 200 from top of the browser window
+          $(".navbar-fixed-top").css("background-color", "#201418"); // if yes, then change the color of class "navbar-fixed-top" to charcoal (#201418)
+        } else {
+          $(".navbar-fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
+        }
+      });
+    });
+</script>
 
-    <script src="js/agency.min.js"></script>
-    <script src="jquery/jquery.min.js"></script>
+
+ 
   </body>
 </html>

@@ -5,6 +5,6 @@ import { Component } from '@angular/core'
   templateUrl: 'app/navbar/navbar.html'
 })
 export class NavbarComponent {
-   siteName = 'rehnz himself';
+    siteName = 'rehnz himself';
     navbarItems = ['About', 'Services', 'Contact'];
  }
