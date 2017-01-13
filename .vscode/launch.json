@@ -1,30 +1,66 @@
+
+
 {
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch index.html",
-            "type": "firefox",
+            "name": "Launch Chrome",
+            "type": "chrome",
             "request": "launch",
-            "file": "${workspaceRoot}"
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true,
+            "userDataDir": "C:/Users/Rene Martinez/AppData/Local/Temp"
         },
         {
-            "name": "Launch localhost",
-            "type": "firefox",
+            "name": "Attach Chrome",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true
+        },
+        {
+            "name": "Launch",
+            "type": "node",
             "request": "launch",
-            "url": "http://localhost/3000",
-            "webRoot": "${workspaceRoot}"
+            "program": "${workspaceRoot}/node_modules/lite-server/bin/lite-server",
+            "port": 5858,
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "externalConsole": false,
+            "sourceMaps": true,
+            "outDir": null
         },
         {
             "name": "Attach",
-            "type": "firefox",
-            "request": "attach"
+            "type": "node",
+            "request": "attach",
+            "port": 5858,
+            "address": "127.0.0.1",
+            "restart": false,
+            "sourceMaps": true,
+            "outDir": null,
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": null
         },
         {
-            "name": "Launch addon",
-            "type": "firefox",
-            "request": "launch",
-            "addonType": "addonSdk",
-            "addonPath": "${workspaceRoot}"
+            "name": "Attach to Process",
+            "type": "node",
+            "request": "attach",
+            "processId": "${command.PickProcess}",
+            "port": 5858,
+            "sourceMaps": true,
+            "outDir": null
         }
     ]
 }

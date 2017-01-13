@@ -1,5 +1,6 @@
 
-<form>
+<form [formGroup]="loginForm" (ngSubmit)="signIn()">
+    <div class ="form-group">
     <div class="panel panel-warning">
         <div class="panel-heading">
             <h3 class="panel-title">Sign In</h3>
@@ -7,14 +8,17 @@
         <div class="panel-body">
             <div class="form-group">
                 <input  
-                        [(ngModel)]="userName" name = "userName" required
+                        formControlName = "userName" required
                         type="text"                         
                         id="userName" 
                         class="form-control" 
                         placeholder="username" 
-                        style="margin-bottom:10px"  />            
+                        style="margin-bottom:10px"
+                        minlength="5"
+                        maxlength="20"  /> 
+                            
                 <input 
-                        [(ngModel)]="userPassword" name = "userPassword" required
+                        formControlName = "userPassword" required
                         type="password"                        
                         id="userPassword" 
                         class="form-control" 
@@ -22,18 +26,14 @@
                         style="margin-bottom:10px" />
                     <div class="wrapper">
                         <span class="group-btn">     
-                        <button class="btn btn-primary btn-md" type="submit">Submit <i class="fa fa-sign-in"></i></button>
+                        <button class="btn btn-primary btn-md" type="submit" [disabled]="!loginForm.valid" >Submit <i class="fa fa-sign-in"></i></button>
                         </span>
                     </div>
-                        <p>Value: {{ userName }}</p>
-                        <p>Valid: {{ userName.valid }}</p>
+                    <div *ngIf="userName.errors.isUnique" class="alert alert-danger">Name already Taken.</div>       
+                      
             </div>   
         </div>
     </div>
-    <script>
-$('btn btn-primary btn-md').click(function(e){
-   e.stopPropagation(); 
-});​
-</script>
+    </div>
 </form>
 
