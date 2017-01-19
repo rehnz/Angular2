@@ -6,25 +6,33 @@ import { LoginFormService } from './login-form.service';
 
 @Component({
   selector: 'login-form',
-  templateUrl: 'app/login/login-form.html' 
+  templateUrl: 'app/login/login-form.html' ,
+  providers: [LoginFormService]
 })
 export class LoginFormComponent
- {
-   constructor (private _loginFormService : LoginFormService)
-   {
-    
-   }
-     //userName: string;
-     //userPassword: string;
-
-      loginForm = new FormGroup(
-              {userName: new FormControl('', Validators.required),
-              userPassword: new FormControl('',Validators.required)})
-  
-    signIn()
+{
+    public users;
+    constructor (private _loginFormService : LoginFormService)
     {
-      console.log(this.loginForm.value);
-    { 
+      
+    }
+      
+      loginForm = new FormGroup({
+        userName: new FormControl('', Validators.required),
+        userPassword: new FormControl('',Validators.required)
+      });
+
+      signIn()
+      {
+        this.users = this._loginFormService.getUsers()
+          .subscribe(users => console.log(users));
+
+        console.log(this.loginForm.value);
+      
+      }              
+        
+        
+    
  }
    
    

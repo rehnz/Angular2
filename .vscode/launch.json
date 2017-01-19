@@ -1,1 +1,16 @@
 
+{
+"version": "0.2.0",
+"configurations": [
+    {
+        "name": "Launch localhost with chrome",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:3000",
+        "sourceMaps": true,
+        "webRoot": "${workspaceRoot}",
+        "userDataDir": "${workspaceRoot}/out/chrome"
+}
+]
+
+}
