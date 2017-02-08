@@ -9,7 +9,7 @@ import { User } from '../classes/user'
 export class LoginFormService
 {
 
-  private usersURL = "https://jsonplaceholder.typicode.com/users";
+  private usersAPI = "https://http://localhost:50248/api/Users";
   constructor(private _http : Http)
   {
      
@@ -17,7 +17,7 @@ export class LoginFormService
 
   getUsers() : Observable<User[]>
   {
-      return this._http.get(this.usersURL)
+      return this._http.get(this.usersAPI)
       .map(response => response.json());
       
   }

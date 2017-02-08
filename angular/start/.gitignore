@@ -4,3 +4,6 @@ typings
 node_modules
 .vscode
 npm-debug.log
+packages
+rehnzWebAPI/packages
+rehnzWebAPI/rehnzWebAPI/bin
