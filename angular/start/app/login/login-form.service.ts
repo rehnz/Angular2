@@ -9,7 +9,7 @@ import { User } from '../classes/user'
 export class LoginFormService
 {
 
-  private usersAPI = "https://http://localhost:50248/api/Users";
+  private usersAPI = "http://localhost:50248/api/Users";
   constructor(private _http : Http)
   {
      

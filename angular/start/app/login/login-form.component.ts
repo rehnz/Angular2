@@ -4,6 +4,8 @@ import { LoginFormValidators } from './login-form.validators';
 import { Observable } from 'rxjs/rx';
 import { LoginFormService } from './login-form.service';
 
+import { User } from '../classes/user'
+
 @Component({
   selector: 'login-form',
   templateUrl: 'app/login/login-form.html' ,
@@ -11,7 +13,7 @@ import { LoginFormService } from './login-form.service';
 })
 export class LoginFormComponent
 {
-    public users;
+    public allUsers;
     constructor (private _loginFormService : LoginFormService)
     {
       
@@ -24,13 +26,12 @@ export class LoginFormComponent
 
       signIn()
       {
-        this.users = this._loginFormService.getUsers()
+        this.allUsers = this._loginFormService.getUsers()
           .subscribe(users => console.log(users));
-
-        console.log(this.loginForm.value);
-      
+          console.log(this.loginForm.value);
       }              
         
+            
         
     
  }

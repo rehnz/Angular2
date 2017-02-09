@@ -2,11 +2,13 @@
 //using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Data;
+//using System.Web.Http.Cors;
 
-namespace rehnzWebAPI
+namespace rehnzWebAPI.Controllers
 {
     //[Produces("application/json")]
     // [Route("api/[controller]")]
+   // [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsersController : ApiController
     {
 
@@ -22,7 +24,7 @@ namespace rehnzWebAPI
         //     public int UserId;
         // }
 
-        // // GET: api/values
+       
         //// [HttpGet]
         public string Get()
         {

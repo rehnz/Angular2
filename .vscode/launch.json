@@ -3,14 +3,22 @@
 "version": "0.2.0",
 "configurations": [
     {
+        "type": "firefox",
+        "request": "launch",
+        "name": "Launch localhost with Firefox",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceRoot}"
+    },
+    {
         "name": "Launch localhost with chrome",
         "type": "chrome",
         "request": "launch",
         "url": "http://localhost:3000",
         "sourceMaps": true,
-        "webRoot": "${workspaceRoot}",
+        "webRoot": "${workspaceRoot}/start/app",
         "userDataDir": "${workspaceRoot}/out/chrome"
 }
+
 ]
 
 }
