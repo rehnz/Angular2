@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template:`<navbar></navbar>
-            <FrontHeader></FrontHeader>
+  template:`<navbar></navbar>          
   `
 })
 export class AppComponent {

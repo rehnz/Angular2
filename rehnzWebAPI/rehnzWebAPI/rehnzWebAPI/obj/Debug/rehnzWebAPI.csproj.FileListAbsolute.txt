@@ -167,8 +167,6 @@ C:\Users\rehnz\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\bin\System.W
 C:\Users\rehnz\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\bin\Antlr3.Runtime.pdb
 C:\Users\rehnz\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\obj\Debug\rehnzWebAPI.dll
 C:\Users\rehnz\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\obj\Debug\rehnzWebAPI.pdb
-C:\Users\rehnz\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\bin\rehnzWebAPI.dll.CodeAnalysisLog.xml
-C:\Users\rehnz\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\bin\rehnzWebAPI.dll.lastcodeanalysissucceeded
 C:\Users\Rene Martinez\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\bin\roslyn\csc.exe
 C:\Users\Rene Martinez\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Rene Martinez\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -339,3 +337,4 @@ C:\Users\Rene Martinez\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\bin\
 C:\Users\Rene Martinez\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\obj\Debug\rehnzWebAPI.csprojResolveAssemblyReference.cache
 C:\Users\Rene Martinez\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\obj\Debug\rehnzWebAPI.dll
 C:\Users\Rene Martinez\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\obj\Debug\rehnzWebAPI.pdb
+C:\Users\rehnz\Desktop\Angular2\rehnzWebAPI\rehnzWebAPI\rehnzWebAPI\obj\Debug\rehnzWebAPI.csprojResolveAssemblyReference.cache

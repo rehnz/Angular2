@@ -13,7 +13,7 @@ import { User } from '../classes/user'
 })
 export class LoginFormComponent
 {
-    public user;
+    private user:User;
     constructor (private _loginFormService : LoginFormService)
     {
       
@@ -26,8 +26,9 @@ export class LoginFormComponent
 
      public signIn(userName:string,userPassword:string)
       {
-          this.user = this._loginFormService.validateUser(userName,userPassword)
-          .subscribe(user => console.log(user));
+           this._loginFormService.validateUser(userName,userPassword)
+              .subscribe(user => console.log(user));
+
            console.log(this.loginForm.value);
       }              
  }

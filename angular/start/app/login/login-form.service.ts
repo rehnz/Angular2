@@ -11,6 +11,7 @@ import { User } from '../classes/user'
 export class LoginFormService
 {
   private defaultUsersAPI = "http://localhost:50248/api/Users";
+  public userSession : User;
   constructor(private _http : Http)
   {
 
@@ -25,21 +26,9 @@ export class LoginFormService
             .catch( response  => Observable.throw(response.json().error || 'Login failure'))      
   }
   private buildUserSession(res:Response):User {
-        let usersJSON = res.json();
+        this.userSession = res.json();
+        return this.userSession;
         
-        if (usersJSON['username'] == null || usersJSON['email'] == null)
-            return null;
-
-        let userSession = <User> {
-       
-        id : usersJSON["id"],
-        username : usersJSON["username"],
-        password : usersJSON["password"],
-        fname : usersJSON["fname"],
-        lname : usersJSON["lname"],
-        email : usersJSON["email"],
-        }
-        return userSession;
     }
     
     private setCurrentSession(user:User)
