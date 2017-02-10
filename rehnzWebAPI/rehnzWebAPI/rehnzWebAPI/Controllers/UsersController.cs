@@ -7,27 +7,22 @@ using System.Data;
 namespace rehnzWebAPI.Controllers
 {
     //[Produces("application/json")]
-    // [Route("api/[controller]")]
+    //[Route("api/[controller]")]
    // [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsersController : ApiController
     {
 
-        DataTable dt = new DataTableGenerator().getDataTable("Select * from Users");
-
-
-        // private class User
-        // {
-        //     public string Id;
-        //     public string Body;
-        //     public string UpdatedOn;
-        //     public string CreatedOn;
-        //     public int UserId;
-        // }
-
-       
-        //// [HttpGet]
-        public string Get()
+        public string Get(string userName, string userPassword)
         {
+            DataTable dt = new DataTable();
+            if (userName == null || userPassword == null)
+            {
+                return null;
+            }
+            else
+            {                  
+                dt = new DataTableGenerator().getDataTable(string.Format("Select * from Users WHERE username = '{0}' AND password = '{1}'", userName, userPassword));
+            }
             return JsonConvert.SerializeObject(dt);
         }
         //

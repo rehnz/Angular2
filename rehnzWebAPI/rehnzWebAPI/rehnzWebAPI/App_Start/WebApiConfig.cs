@@ -14,7 +14,7 @@ namespace rehnzWebAPI
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            // Need this because Angular2 Client Using differnet SErver (Local host)
+            
            
 
             config.Routes.MapHttpRoute(
